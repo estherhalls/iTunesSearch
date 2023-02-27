@@ -15,11 +15,15 @@ class AlbumTableViewCell: UITableViewCell {
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var trackQTYLabel: UILabel!
     
+    var album: Album?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    func configure(with album: Album) {
+        albumImageView.layer.cornerRadius = 50
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
