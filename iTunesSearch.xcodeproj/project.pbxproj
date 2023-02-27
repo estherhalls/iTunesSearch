@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		EB24ADCC29AD39400029FBA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADCB29AD39400029FBA9 /* AppDelegate.swift */; };
 		EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADCD29AD39400029FBA9 /* SceneDelegate.swift */; };
-		EB24ADD029AD39400029FBA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADCF29AD39400029FBA9 /* ViewController.swift */; };
 		EB24ADD329AD39400029FBA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD129AD39400029FBA9 /* Main.storyboard */; };
 		EB24ADD529AD39430029FBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD429AD39430029FBA9 /* Assets.xcassets */; };
 		EB24ADD829AD39430029FBA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD629AD39430029FBA9 /* LaunchScreen.storyboard */; };
+		EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */; };
+		EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB24ADC829AD39400029FBA9 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB24ADCB29AD39400029FBA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB24ADCD29AD39400029FBA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB24ADCF29AD39400029FBA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB24ADD229AD39400029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB24ADD429AD39430029FBA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB24ADD729AD39430029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB24ADD929AD39430029FBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTableViewController.swift; sourceTree = "<group>"; };
+		EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		EB24ADCA29AD39400029FBA9 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				EB24ADD129AD39400029FBA9 /* Main.storyboard */,
+				EB24ADE429AD43540029FBA9 /* iTunes Search List */,
+				EB24ADE529AD43680029FBA9 /* Album Detail View */,
+				EB24ADDF29AD3B8F0029FBA9 /* Resources */,
+			);
+			path = iTunesSearch;
+			sourceTree = "<group>";
+		};
+		EB24ADDF29AD3B8F0029FBA9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				EB24ADCB29AD39400029FBA9 /* AppDelegate.swift */,
 				EB24ADCD29AD39400029FBA9 /* SceneDelegate.swift */,
-				EB24ADCF29AD39400029FBA9 /* ViewController.swift */,
-				EB24ADD129AD39400029FBA9 /* Main.storyboard */,
 				EB24ADD429AD39430029FBA9 /* Assets.xcassets */,
 				EB24ADD629AD39430029FBA9 /* LaunchScreen.storyboard */,
 				EB24ADD929AD39430029FBA9 /* Info.plist */,
 			);
-			path = iTunesSearch;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EB24ADE429AD43540029FBA9 /* iTunes Search List */ = {
+			isa = PBXGroup;
+			children = (
+				EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */,
+			);
+			path = "iTunes Search List";
+			sourceTree = "<group>";
+		};
+		EB24ADE529AD43680029FBA9 /* Album Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */,
+			);
+			path = "Album Detail View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB24ADD029AD39400029FBA9 /* ViewController.swift in Sources */,
 				EB24ADCC29AD39400029FBA9 /* AppDelegate.swift in Sources */,
 				EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */,
+				EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */,
+				EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				INFOPLIST_FILE = iTunesSearch/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
