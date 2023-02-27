@@ -8,7 +8,13 @@
 import UIKit
 
 class AlbumTableViewCell: UITableViewCell {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var albumImageView: ServiceRequestingImageView!
+    @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet weak var trackQTYLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

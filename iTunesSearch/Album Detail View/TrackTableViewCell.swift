@@ -8,7 +8,12 @@
 import UIKit
 
 class TrackTableViewCell: UITableViewCell {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var trackNumberLabel: UILabel!
+    @IBOutlet weak var trackTitleLabel: UILabel!
+    @IBOutlet weak var trackDurationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

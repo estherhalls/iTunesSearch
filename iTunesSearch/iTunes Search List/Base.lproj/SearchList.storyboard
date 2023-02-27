@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wPz-wL-IgN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="albumCell" id="pd5-SW-T62">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="albumCell" id="pd5-SW-T62" customClass="AlbumTableViewCell" customModule="iTunesSearch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="108.33333587646484"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pd5-SW-T62" id="K2H-Cp-HRH">
@@ -81,6 +81,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="albumImageView" destination="hra-as-xsJ" id="Up9-PV-23v"/>
+                                    <outlet property="albumNameLabel" destination="4wc-ZT-OUA" id="fqR-jk-joy"/>
+                                    <outlet property="artistNameLabel" destination="6fi-Hc-PPe" id="dAL-HA-p3F"/>
+                                    <outlet property="trackQTYLabel" destination="Ry6-qY-T1z" id="65u-PS-Isq"/>
                                     <segue destination="59y-lX-Uum" kind="show" id="3Hl-Pe-s5N"/>
                                 </connections>
                             </tableViewCell>

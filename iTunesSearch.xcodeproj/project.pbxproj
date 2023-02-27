@@ -17,6 +17,7 @@
 		EB24ADE729AD44F60029FBA9 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */; };
 		EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */; };
 		EB24ADEC29AD45390029FBA9 /* AlbumDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */; };
+		EB24ADEE29AD46A70029FBA9 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADED29AD46A70029FBA9 /* ServiceRequestingImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		EB24ADEB29AD45390029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iTunesSearch/Base.lproj/AlbumDetail.storyboard; sourceTree = "<group>"; };
+		EB24ADED29AD46A70029FBA9 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		EB24ADCA29AD39400029FBA9 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				EB24ADEF29AD46AE0029FBA9 /* Services */,
 				EB24ADE429AD43540029FBA9 /* iTunes Search List */,
 				EB24ADE529AD43680029FBA9 /* Album Detail View */,
 				EB24ADDF29AD3B8F0029FBA9 /* Resources */,
@@ -101,6 +104,14 @@
 				EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */,
 			);
 			path = "Album Detail View";
+			sourceTree = "<group>";
+		};
+		EB24ADEF29AD46AE0029FBA9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EB24ADED29AD46A70029FBA9 /* ServiceRequestingImageView.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */,
 				EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */,
 				EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */,
+				EB24ADEE29AD46A70029FBA9 /* ServiceRequestingImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

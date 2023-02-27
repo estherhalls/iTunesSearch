@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uwl-t0-uxQ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +12,7 @@
             <objects>
                 <tableViewController id="Uwl-t0-uxQ" customClass="AlbumDetailTableViewController" customModule="iTunesSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uT1-bJ-PvA">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="iel-rD-jZH">
@@ -55,7 +56,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" id="nRn-i5-T3H">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" id="nRn-i5-T3H" customClass="TrackTableViewCell" customModule="iTunesSearch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="301" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nRn-i5-T3H" id="LXW-pC-SFH">
@@ -91,6 +92,11 @@
                                         <constraint firstItem="wOC-IN-006" firstAttribute="leading" secondItem="LXW-pC-SFH" secondAttribute="leadingMargin" constant="8" id="zH9-Q0-Ac0"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="trackDurationLabel" destination="OWn-Qp-9oo" id="5b7-uL-VbF"/>
+                                    <outlet property="trackNumberLabel" destination="wOC-IN-006" id="YLJ-RE-Abl"/>
+                                    <outlet property="trackTitleLabel" destination="fRH-ns-A62" id="Wji-Hb-BmM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
