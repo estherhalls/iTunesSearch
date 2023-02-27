@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		EB24ADCC29AD39400029FBA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADCB29AD39400029FBA9 /* AppDelegate.swift */; };
 		EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADCD29AD39400029FBA9 /* SceneDelegate.swift */; };
-		EB24ADD329AD39400029FBA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD129AD39400029FBA9 /* Main.storyboard */; };
+		EB24ADD329AD39400029FBA9 /* SearchList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD129AD39400029FBA9 /* SearchList.storyboard */; };
 		EB24ADD529AD39430029FBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD429AD39430029FBA9 /* Assets.xcassets */; };
 		EB24ADD829AD39430029FBA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD629AD39430029FBA9 /* LaunchScreen.storyboard */; };
 		EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */; };
 		EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */; };
+		EB24ADE729AD44F60029FBA9 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */; };
+		EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */; };
+		EB24ADEC29AD45390029FBA9 /* AlbumDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB24ADC829AD39400029FBA9 /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB24ADCB29AD39400029FBA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB24ADCD29AD39400029FBA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EB24ADD229AD39400029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB24ADD229AD39400029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SearchList.storyboard; sourceTree = "<group>"; };
 		EB24ADD429AD39430029FBA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB24ADD729AD39430029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB24ADD929AD39430029FBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTableViewController.swift; sourceTree = "<group>"; };
 		EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		EB24ADEB29AD45390029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iTunesSearch/Base.lproj/AlbumDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,6 @@
 		EB24ADCA29AD39400029FBA9 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				EB24ADD129AD39400029FBA9 /* Main.storyboard */,
 				EB24ADE429AD43540029FBA9 /* iTunes Search List */,
 				EB24ADE529AD43680029FBA9 /* Album Detail View */,
 				EB24ADDF29AD3B8F0029FBA9 /* Resources */,
@@ -81,7 +86,9 @@
 		EB24ADE429AD43540029FBA9 /* iTunes Search List */ = {
 			isa = PBXGroup;
 			children = (
+				EB24ADD129AD39400029FBA9 /* SearchList.storyboard */,
 				EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */,
+				EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */,
 			);
 			path = "iTunes Search List";
 			sourceTree = "<group>";
@@ -89,7 +96,9 @@
 		EB24ADE529AD43680029FBA9 /* Album Detail View */ = {
 			isa = PBXGroup;
 			children = (
+				EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */,
 				EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */,
+				EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */,
 			);
 			path = "Album Detail View";
 			sourceTree = "<group>";
@@ -153,8 +162,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB24ADD829AD39430029FBA9 /* LaunchScreen.storyboard in Resources */,
+				EB24ADEC29AD45390029FBA9 /* AlbumDetail.storyboard in Resources */,
 				EB24ADD529AD39430029FBA9 /* Assets.xcassets in Resources */,
-				EB24ADD329AD39400029FBA9 /* Main.storyboard in Resources */,
+				EB24ADD329AD39400029FBA9 /* SearchList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB24ADE729AD44F60029FBA9 /* AlbumTableViewCell.swift in Sources */,
+				EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */,
 				EB24ADCC29AD39400029FBA9 /* AppDelegate.swift in Sources */,
 				EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */,
 				EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */,
@@ -175,12 +187,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EB24ADD129AD39400029FBA9 /* Main.storyboard */ = {
+		EB24ADD129AD39400029FBA9 /* SearchList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EB24ADD229AD39400029FBA9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = SearchList.storyboard;
 			sourceTree = "<group>";
 		};
 		EB24ADD629AD39430029FBA9 /* LaunchScreen.storyboard */ = {
@@ -189,6 +201,14 @@
 				EB24ADD729AD39430029FBA9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB24ADEB29AD45390029FBA9 /* Base */,
+			);
+			name = AlbumDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
