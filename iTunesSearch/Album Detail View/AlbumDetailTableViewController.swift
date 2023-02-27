@@ -8,7 +8,10 @@
 import UIKit
 
 class AlbumDetailTableViewController: UITableViewController {
-
+    @IBOutlet weak var albumImageView: UIImageView!
+    @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

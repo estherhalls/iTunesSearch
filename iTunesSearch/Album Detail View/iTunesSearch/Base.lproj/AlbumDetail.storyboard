@@ -105,6 +105,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="tbL-br-QYF"/>
+                    <connections>
+                        <outlet property="albumImageView" destination="zEJ-hb-9VH" id="eQD-4Z-ODr"/>
+                        <outlet property="albumNameLabel" destination="86k-dJ-53H" id="8AH-Dw-3c7"/>
+                        <outlet property="artistNameLabel" destination="MRO-GW-RG6" id="ZmO-CV-i7C"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtd-0z-nyr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

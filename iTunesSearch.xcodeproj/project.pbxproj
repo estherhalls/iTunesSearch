@@ -13,11 +13,11 @@
 		EB24ADD529AD39430029FBA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD429AD39430029FBA9 /* Assets.xcassets */; };
 		EB24ADD829AD39430029FBA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADD629AD39430029FBA9 /* LaunchScreen.storyboard */; };
 		EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */; };
-		EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */; };
 		EB24ADE729AD44F60029FBA9 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */; };
 		EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */; };
 		EB24ADEC29AD45390029FBA9 /* AlbumDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */; };
 		EB24ADEE29AD46A70029FBA9 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADED29AD46A70029FBA9 /* ServiceRequestingImageView.swift */; };
+		EB372D9429AD4A8D002F7E4A /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9329AD4A8D002F7E4A /* AlbumDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +29,11 @@
 		EB24ADD729AD39430029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB24ADD929AD39430029FBA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTableViewController.swift; sourceTree = "<group>"; };
-		EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
 		EB24ADEB29AD45390029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iTunesSearch/Base.lproj/AlbumDetail.storyboard; sourceTree = "<group>"; };
 		EB24ADED29AD46A70029FBA9 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
+		EB372D9329AD4A8D002F7E4A /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */,
-				EB24ADE229AD434C0029FBA9 /* AlbumDetailTableViewController.swift */,
 				EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */,
+				EB372D9329AD4A8D002F7E4A /* AlbumDetailTableViewController.swift */,
 			);
 			path = "Album Detail View";
 			sourceTree = "<group>";
@@ -190,8 +190,8 @@
 				EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */,
 				EB24ADCC29AD39400029FBA9 /* AppDelegate.swift in Sources */,
 				EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */,
-				EB24ADE329AD434C0029FBA9 /* AlbumDetailTableViewController.swift in Sources */,
 				EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */,
+				EB372D9429AD4A8D002F7E4A /* AlbumDetailTableViewController.swift in Sources */,
 				EB24ADEE29AD46A70029FBA9 /* ServiceRequestingImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
