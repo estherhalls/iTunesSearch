@@ -87,3 +87,14 @@ class iTunesSearchTableViewController: UITableViewController {
     */
 
 }
+
+// MARK: - Search Bar Delegate Extension
+// User must be able to search Artist name or album name to return results
+extension iTunesSearchTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        NetworkingController.fetchAlbum(with: searchText) { album in
+//            guard let album else { return }
+//            self.updateViews(album: album)
+//        }
+    }
+}

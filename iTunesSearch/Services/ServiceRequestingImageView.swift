@@ -5,7 +5,7 @@
 //  Created by Esther on 2/27/23.
 //
 
-import UIKit
+import UIKit.UIImageView
 
 class ServiceRequestingImageView: UIImageView {
     
