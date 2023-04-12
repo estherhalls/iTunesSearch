@@ -16,13 +16,8 @@ struct Album: Decodable {
         case collectionName
         case artworkURL = "artworkUrl100"
         case trackCount
-//        case kind
-//        case collectionID = "collectionId"
-//        case trackID = "trackId"
-//        case trackName
-//        case trackNumber
-//        case primaryGenre = "primaryGenreName"
     }
+    
     let wrapperType: String
     let collectionType: String // Album
     let artistID: Int
@@ -30,14 +25,6 @@ struct Album: Decodable {
     let collectionName: String // Album Name
     let artworkURL: String?
     let trackCount: Int
-    
-//    let kind: String
-//    let collectionID: Int
-//    let trackID: Int
-//    let trackName: String
-//    let trackNumber: Int
-//    let primaryGenre: String
-    
-    // Duration?
+
     
 } // End of Struct
