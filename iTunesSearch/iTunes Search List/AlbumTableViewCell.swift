@@ -23,7 +23,7 @@ class AlbumTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(with album: Album) {
+    func configureSearchList(with album: Album) {
         fetchImage(from: album)
         self.album = album
 //        albumImageView.layer.cornerRadius = 50

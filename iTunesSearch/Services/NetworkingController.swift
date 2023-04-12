@@ -8,9 +8,7 @@
 import Foundation
 
 class NetworkingController {
-    // Required Technologies: Codable, Result Type, Custom Errors, Capture Lists
-//https://itunes.apple.com/search?entity=album&limit=25&term=AlkalineTrio
-    
+
     // Base URL
     private static let baseURL = URL(string: "https://itunes.apple.com/")
     
@@ -20,8 +18,7 @@ class NetworkingController {
     private static let kEntityKey = "entity"
     private static let kEntityValue = "album"
     
-    static func fetchAlbum(with searchTermValue: String, completion: @escaping(Result<Album, NetworkError>) -> Void) {
-        
+    static func fetchAlbum(searchTermValue: String, completion: @escaping(Result<Results, NetworkError>) -> Void) {
         // Step 1: URL
         guard let url = baseURL else {return}
         let searchURL = url.appending(path: kSearchComponent)
@@ -31,7 +28,7 @@ class NetworkingController {
         let searchQuery = URLQueryItem(name: kSearchTermKey, value: searchTermValue)
         let entityQuery = URLQueryItem(name: kEntityKey, value: kEntityValue)
         urlComponents?.queryItems = [searchQuery, entityQuery]
-        
+        // Final URL
         guard let finalURL = urlComponents?.url else {
             completion(.failure(.invalidURL(url)))
             return
@@ -51,8 +48,8 @@ class NetworkingController {
             }
             // Convert to JSON (do, try, catch)
             do {
-                let album = try JSONDecoder().decode(Album.self, from: albumData)
-                completion(.success(album))
+                let albums = try JSONDecoder().decode(Results.self, from: albumData)
+                completion(.success(albums))
             } catch {
                 completion(.failure(.unableToDecode))
                 return

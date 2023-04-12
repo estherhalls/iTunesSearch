@@ -7,76 +7,40 @@
 
 import UIKit
 
-class iTunesSearchTableViewController: UITableViewController {
+class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegate {
+    
+    // MARK: - Properties
+    lazy var searchBar = UISearchBar()
+    var albums: [Album] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        searchBar.delegate = self
+        searchBar.searchBarStyle = UISearchBar.Style.default
+        searchBar.placeholder = "Search Music"
+        searchBar.sizeToFit()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarButtonClicked))
+        navigationItem.titleView = searchBar
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    // MARK: - Table View Data Source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return albums.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
 
-        // Configure the cell...
+        let album = albums[indexPath.row]
+        cell.configureSearchList(with: album)
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+ 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -84,17 +48,31 @@ class iTunesSearchTableViewController: UITableViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+   
 
 }
 
 // MARK: - Search Bar Delegate Extension
 // User must be able to search Artist name or album name to return results
-extension iTunesSearchTableViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        NetworkingController.fetchAlbum(with: searchText) { album in
-//            guard let album else { return }
-//            self.updateViews(album: album)
-//        }
+extension iTunesSearchTableViewController {
+    @objc func searchBarButtonClicked() {
+        searchBar.resignFirstResponder()
+        guard let searchTerm = searchBar.text else {
+            print ("Search Value Empty")
+            return
+        }
+        
+        NetworkingController.fetchAlbum(searchTermValue: searchTerm) { result in
+            switch result {
+            case .success(let albums):
+                self.albums = albums.results
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.searchBar.resignFirstResponder()
+                }
+            case .failure(let error):
+                print("There was an error fetching results!", error.errorDescription!)
+            }
+        }
     }
-}
+} // End Class
