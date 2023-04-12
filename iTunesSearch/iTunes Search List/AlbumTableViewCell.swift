@@ -29,6 +29,7 @@ class AlbumTableViewCell: UITableViewCell {
 //        albumImageView.layer.cornerRadius = 50
         albumNameLabel.text = album.collectionName
         trackQTYLabel.text = "\(album.trackCount)"
+        artistNameLabel.text = album.artistName
     }
     
     func fetchImage(from album: Album) {
