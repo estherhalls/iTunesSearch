@@ -38,5 +38,6 @@ struct Album: Decodable {
     let trackNumber: Int
     let primaryGenre: String
     
+    // Duration?
     
 } // End of Struct
