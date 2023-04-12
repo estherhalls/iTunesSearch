@@ -14,6 +14,9 @@ class NetworkingController {
     private static let baseURLString = "https://itunes.apple.com/lookup"
     
     static func fetchAlbum(with url: URL, completion: @escaping(Result<Album, NetworkError>) -> Void) {
+        
+        // Step 1: URL
+        // Step 2: Data Task
         URLSession.shared.dataTask(with: url) { dTaskData, _, error in
             if let error {
                 print("Encountered error: \(error.localizedDescription)")
@@ -24,7 +27,7 @@ class NetworkingController {
                 completion(.failure(.noData))
                 return
             }
-            // Conveert to JSON (do, try, catch)
+            // Convert to JSON (do, try, catch)
             do {
                 let album = try JSONDecoder().decode(Album.self, from: albumData)
                 completion(.success(album))
@@ -35,4 +38,5 @@ class NetworkingController {
             // Resume starts dataTask and continues it; tasks begin in suspended state
         }.resume()
     }
+    
 } // End of Class

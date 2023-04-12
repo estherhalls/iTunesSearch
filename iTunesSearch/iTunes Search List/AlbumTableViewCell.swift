@@ -15,19 +15,37 @@ class AlbumTableViewCell: UITableViewCell {
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var trackQTYLabel: UILabel!
     
+    // album to pass from list to detail view
     var album: Album?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
     func configure(with album: Album) {
-        albumImageView.layer.cornerRadius = 50
+        fetchImage(from: album)
         self.album = album
+        albumImageView.layer.cornerRadius = 50
         /// Album artwork is an optional url string "artworkURL"
         albumNameLabel.text = album.collectionName
         trackQTYLabel.text = "\(album.trackCount)"
     }
+    
+    func fetchImage(from album: Album) {
+        guard let imageURL = album.artworkURL else {return}
+        ServiceRequestingImageView.fetchImage(with: imageURL) { [weak self] result in
+            switch result {
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.albumImageView.image = image
+                }
+            case .failure(let error):
+                print("There was an error retrieving the image!", error.errorDescription!)
+            }
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
