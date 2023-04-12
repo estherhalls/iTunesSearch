@@ -23,6 +23,10 @@ class AlbumTableViewCell: UITableViewCell {
     }
     func configure(with album: Album) {
         albumImageView.layer.cornerRadius = 50
+        self.album = album
+        /// Album artwork is an optional url string "artworkURL"
+        albumNameLabel.text = album.collectionName
+        trackQTYLabel.text = "\(album.trackCount)"
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

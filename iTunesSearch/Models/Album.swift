@@ -24,10 +24,10 @@ struct Album: Decodable {
         case primaryGenre = "primaryGenreName"
     }
     let wrapperType: String
-    let collectionType: String
+    let collectionType: String // Album
     let artistID: Int
     let artistName: String
-    let collectionName: String
+    let collectionName: String // Album Name
     let artworkURL: String?
     let trackCount: Int
     
