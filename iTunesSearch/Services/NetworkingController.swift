@@ -9,15 +9,37 @@ import Foundation
 
 class NetworkingController {
     // Required Technologies: Codable, Result Type, Custom Errors, Capture Lists
-    // Album Detail URL: https://itunes.apple.com/lookup?entity=song&id=320412048
+//https://itunes.apple.com/search?entity=album&limit=25&term=AlkalineTrio
     
-    private static let baseURLString = "https://itunes.apple.com/lookup"
+    // Base URL
+    private static let baseURL = URL(string: "https://itunes.apple.com/")
     
-    static func fetchAlbum(with url: URL, completion: @escaping(Result<Album, NetworkError>) -> Void) {
+    // Keys for URL Components
+    private static let kSearchComponent = "search"
+    private static let kSearchTermKey = "term"
+    private static let kEntityKey = "entity"
+    private static let kEntityValue = "album"
+    
+    static func fetchAlbum(with searchTermValue: String, completion: @escaping(Result<Album, NetworkError>) -> Void) {
         
         // Step 1: URL
+        guard let url = baseURL else {return}
+        let searchURL = url.appending(path: kSearchComponent)
+        // Add query items with URLComponent Struct
+        var urlComponents = URLComponents(url: searchURL, resolvingAgainstBaseURL: true)
+        // Query Items
+        let searchQuery = URLQueryItem(name: kSearchTermKey, value: searchTermValue)
+        let entityQuery = URLQueryItem(name: kEntityKey, value: kEntityValue)
+        urlComponents?.queryItems = [searchQuery, entityQuery]
+        
+        guard let finalURL = urlComponents?.url else {
+            completion(.failure(.invalidURL(url)))
+            return
+        }
+        print(finalURL)
+        
         // Step 2: Data Task
-        URLSession.shared.dataTask(with: url) { dTaskData, _, error in
+        URLSession.shared.dataTask(with: finalURL) { dTaskData, _, error in
             if let error {
                 print("Encountered error: \(error.localizedDescription)")
                 completion(.failure(.thrownError(error)))

@@ -26,8 +26,7 @@ class AlbumTableViewCell: UITableViewCell {
     func configure(with album: Album) {
         fetchImage(from: album)
         self.album = album
-        albumImageView.layer.cornerRadius = 50
-        /// Album artwork is an optional url string "artworkURL"
+//        albumImageView.layer.cornerRadius = 50
         albumNameLabel.text = album.collectionName
         trackQTYLabel.text = "\(album.trackCount)"
     }
