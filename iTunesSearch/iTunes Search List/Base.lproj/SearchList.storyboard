@@ -85,7 +85,7 @@
                                     <outlet property="albumNameLabel" destination="4wc-ZT-OUA" id="fqR-jk-joy"/>
                                     <outlet property="artistNameLabel" destination="6fi-Hc-PPe" id="dAL-HA-p3F"/>
                                     <outlet property="trackQTYLabel" destination="Ry6-qY-T1z" id="65u-PS-Isq"/>
-                                    <segue destination="59y-lX-Uum" kind="show" id="3Hl-Pe-s5N"/>
+                                    <segue destination="59y-lX-Uum" kind="show" identifier="toDetailVC" id="3Hl-Pe-s5N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

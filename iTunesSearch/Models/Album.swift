@@ -27,7 +27,7 @@ struct Album: Decodable {
     let collectionType: String // Album
     let collectionID: Int // Shared with album and tracks in the album - passed on to pull track info for detail pagee
     let collectionName: String // Album Name
-    let artworkURL: String?
+    let artworkURL: String
     let trackCount: Int
 
     

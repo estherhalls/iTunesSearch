@@ -14,6 +14,7 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
     var placeholderView: UIImageView!
     var albums: [Album] = []
     
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Searchbar Setup
@@ -64,12 +65,28 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toDetailVC",
+           let destinationVC = segue.destination as? AlbumDetailTableViewController {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dataToSend = self.albums[indexPath.row]
+                destinationVC.album = dataToSend
+                // Network Call for Tracks
+                NetworkingController.fetchTracks(collectionIDValue: dataToSend.collectionID) { result in
+                    switch result {
+                    case .success(let albumIDResult):
+                        DispatchQueue.main.async {
+                            destinationVC.albumData = albumIDResult
+                        }
+                    case .failure(let error):
+                        print("There was an error fetching data for album tracks", error.errorDescription!)
+                    }
+                }
+            }
+        }
     }
     
     
-}
+} // End of Class
 
 // MARK: - Search Bar Delegate Extension
 // User must be able to search Artist name or album name to return results

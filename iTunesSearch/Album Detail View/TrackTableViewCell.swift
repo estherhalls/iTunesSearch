@@ -16,13 +16,15 @@ class TrackTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureTracksList(with track: Track) {
+        DispatchQueue.main.async {
+            self.trackNumberLabel.text = "\(String(describing: track.trackNumber))"
+            self.trackTitleLabel.text = track.trackName
+            self.trackDurationLabel.text = "\(String(describing: track.trackTime))"
+        }
     }
 
-}
+
+} // End of Class

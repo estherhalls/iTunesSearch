@@ -13,7 +13,7 @@ struct AlbumIDResults: Decodable {
 
 struct Track: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case collectionType
+        case wrapperType
         case collectionName
         case collectionID = "collectionId"
         case artistName
@@ -22,19 +22,19 @@ struct Track: Decodable {
         case trackName
         case trackNumber
         case primaryGenre = "primaryGenreName"
-        case trackTime = "trackTimeMilis"
+        case trackTime = "trackTimeMillis"
     }
     
-    let collectionType: String
+    let wrapperType: String?
     let collectionName: String
     let collectionID: Int
     let artistName: String
     let artworkURL: String
-    let trackCount: Int
-    let trackName: String
-    let trackNumber: Int
-    let primaryGenre: String
-    let trackTime: Int // duration in Milliseconds
-
+    let trackCount: Int?
+    let trackName: String?
+    let trackNumber: Int?
+    let primaryGenre: String?
+    let trackTime: Int? // duration in Milliseconds
+    
     
 } // End of Struct

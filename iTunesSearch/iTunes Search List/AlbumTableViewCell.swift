@@ -10,31 +10,28 @@ import UIKit
 class AlbumTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
-    @IBOutlet weak var albumImageView: ServiceRequestingImageView!
+    @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var trackQTYLabel: UILabel!
     
-    // album to pass from list to detail view
-    var album: Album?
     
+    // MARK: - Lifecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configureSearchList(with album: Album) {
-        fetchImage(from: album)
-        self.album = album
-//        albumImageView.layer.cornerRadius = 50
+       setImage(from: album)
+        //        albumImageView.layer.cornerRadius = 50
         albumNameLabel.text = album.collectionName
         trackQTYLabel.text = "\(album.trackCount)"
         artistNameLabel.text = album.artistName
     }
     
-    func fetchImage(from album: Album) {
-        guard let imageURL = album.artworkURL else {return}
-        ServiceRequestingImageView.fetchImage(with: imageURL) { [weak self] result in
+    func setImage(from album: Album) {
+        let imageURL = album.artworkURL
+        NetworkingController.fetchImage(with: imageURL) { [weak self] result in
             switch result {
             case .success(let image):
                 DispatchQueue.main.async {
@@ -45,11 +42,5 @@ class AlbumTableViewCell: UITableViewCell {
             }
         }
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-
-}
+} // End of Class
