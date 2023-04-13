@@ -11,67 +11,88 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
     
     // MARK: - Properties
     lazy var searchBar = UISearchBar()
+    var placeholderView: UIImageView!
     var albums: [Album] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Searchbar Setup
         searchBar.delegate = self
         searchBar.searchBarStyle = UISearchBar.Style.default
         searchBar.placeholder = "Search Music"
         searchBar.sizeToFit()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchBarButtonClicked))
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
         navigationItem.titleView = searchBar
-
+        
+        
+        // Placeholder Logo View Setup
+        placeholderView = UIImageView(image: UIImage(named: "iTunesLogo"))
+        placeholderView.alpha = 0.5
+        placeholderView.contentMode = .scaleAspectFit
+        placeholderView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(placeholderView)
+        
+        NSLayoutConstraint.activate([
+            placeholderView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),
+            placeholderView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 15),
+            placeholderView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
+            placeholderView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        placeholderView.isHidden = false
+    }
+    
     // MARK: - Table View Data Source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return albums.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "albumCell", for: indexPath) as? AlbumTableViewCell else { return UITableViewCell() }
-
         let album = albums[indexPath.row]
         cell.configureSearchList(with: album)
-
+        
         return cell
     }
- 
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-   
-
+    
+    
 }
 
 // MARK: - Search Bar Delegate Extension
 // User must be able to search Artist name or album name to return results
 extension iTunesSearchTableViewController {
-    @objc func searchBarButtonClicked() {
-        searchBar.resignFirstResponder()
-        guard let searchTerm = searchBar.text else {
-            print ("Search Value Empty")
-            return
-        }
-        
-        NetworkingController.fetchAlbum(searchTermValue: searchTerm) { result in
-            switch result {
-            case .success(let albums):
-                self.albums = albums.results
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    self.searchBar.resignFirstResponder()
+    //    @objc func searchBarButtonClicked() {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            albums.removeAll()
+            placeholderView.isHidden = false
+            tableView.reloadData()
+        } else {
+            placeholderView.isHidden = true
+            
+            NetworkingController.fetchAlbum(searchTermValue: searchText) { result in
+                switch result {
+                case .success(let albums):
+                    self.albums = albums.results
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print("There was an error fetching results!", error.errorDescription!)
                 }
-            case .failure(let error):
-                print("There was an error fetching results!", error.errorDescription!)
             }
         }
     }
