@@ -17,14 +17,18 @@ class TrackTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     func configureTracksList(with track: Track) {
         DispatchQueue.main.async {
-            self.trackNumberLabel.text = "\(String(describing: track.trackNumber))"
+            if let trackNumber = track.trackNumber {
+                self.trackNumberLabel.text = "\(trackNumber)"
+            }
             self.trackTitleLabel.text = track.trackName
-            self.trackDurationLabel.text = "\(String(describing: track.trackTime))"
+            if let trackTime = track.trackTime {
+                self.trackDurationLabel.text = "\(trackTime)"
+            }
         }
     }
-
-
+    
+    
 } // End of Class
