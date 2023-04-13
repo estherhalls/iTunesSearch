@@ -23,7 +23,6 @@ class AlbumTableViewCell: UITableViewCell {
     
     func configureSearchList(with album: Album) {
        setImage(from: album)
-        //        albumImageView.layer.cornerRadius = 50
         albumNameLabel.text = album.collectionName
         trackQTYLabel.text = "\(album.trackCount)"
         artistNameLabel.text = album.artistName

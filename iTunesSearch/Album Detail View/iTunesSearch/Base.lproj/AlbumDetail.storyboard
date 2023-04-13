@@ -64,13 +64,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(no.)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOC-IN-006">
-                                            <rect key="frame" x="28" y="13.666666666666666" width="27" height="16.333333333333336"/>
+                                            <rect key="frame" x="28" y="13.666666666666666" width="35" height="16.333333333333336"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="HJK-xJ-9Qo"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="(Track Title)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRH-ns-A62">
-                                            <rect key="frame" x="63" y="13.666666666666666" width="259.33333333333331" height="16.333333333333336"/>
+                                            <rect key="frame" x="71.000000000000014" y="13.666666666666666" width="251.33333333333337" height="16.333333333333336"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
