@@ -7,22 +7,34 @@
 
 import Foundation
 
+struct AlbumIDResults: Decodable {
+    let results: [Track]
+}
+
 struct Track: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case kind
+        case collectionType
+        case collectionName
         case collectionID = "collectionId"
-        case trackID = "trackId"
+        case artistName
+        case artworkURL = "artworkUrl100"
+        case trackCount
         case trackName
         case trackNumber
         case primaryGenre = "primaryGenreName"
+        case trackTime = "trackTimeMilis"
     }
-
-    let kind: String
+    
+    let collectionType: String
+    let collectionName: String
     let collectionID: Int
-    let trackID: Int
+    let artistName: String
+    let artworkURL: String
+    let trackCount: Int
     let trackName: String
     let trackNumber: Int
     let primaryGenre: String
-    // Duration?
+    let trackTime: Int // duration in Milliseconds
+
     
 } // End of Struct

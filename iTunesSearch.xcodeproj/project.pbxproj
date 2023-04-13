@@ -20,7 +20,6 @@
 		EB372D9629AD4E5D002F7E4A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9529AD4E5D002F7E4A /* NetworkError.swift */; };
 		EB372D9829AD4FBD002F7E4A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9729AD4FBD002F7E4A /* Album.swift */; };
 		EB372D9B29AD5028002F7E4A /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9A29AD5028002F7E4A /* NetworkingController.swift */; };
-		EB372D9D29AD56F5002F7E4A /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9C29AD56F5002F7E4A /* Results.swift */; };
 		EB372D9F29AD570D002F7E4A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9E29AD570D002F7E4A /* Track.swift */; };
 		EBAD059F29E745F400F06521 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAD059E29E745F400F06521 /* ServiceRequestingImageView.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +40,6 @@
 		EB372D9529AD4E5D002F7E4A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EB372D9729AD4FBD002F7E4A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		EB372D9A29AD5028002F7E4A /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
-		EB372D9C29AD56F5002F7E4A /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		EB372D9E29AD570D002F7E4A /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		EBAD059E29E745F400F06521 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +128,6 @@
 		EB372D9929AD4FC1002F7E4A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EB372D9C29AD56F5002F7E4A /* Results.swift */,
 				EB372D9729AD4FBD002F7E4A /* Album.swift */,
 				EB372D9E29AD570D002F7E4A /* Track.swift */,
 			);
@@ -216,7 +213,6 @@
 				EB24ADCE29AD39400029FBA9 /* SceneDelegate.swift in Sources */,
 				EB372D9829AD4FBD002F7E4A /* Album.swift in Sources */,
 				EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */,
-				EB372D9D29AD56F5002F7E4A /* Results.swift in Sources */,
 				EB372D9429AD4A8D002F7E4A /* AlbumDetailTableViewController.swift in Sources */,
 				EB372D9B29AD5028002F7E4A /* NetworkingController.swift in Sources */,
 				EBAD059F29E745F400F06521 /* ServiceRequestingImageView.swift in Sources */,

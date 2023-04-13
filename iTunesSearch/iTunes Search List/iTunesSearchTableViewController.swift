@@ -82,7 +82,6 @@ extension iTunesSearchTableViewController {
             tableView.reloadData()
         } else {
             placeholderView.isHidden = true
-            
             NetworkingController.fetchAlbum(searchTermValue: searchText) { result in
                 switch result {
                 case .success(let albums):
