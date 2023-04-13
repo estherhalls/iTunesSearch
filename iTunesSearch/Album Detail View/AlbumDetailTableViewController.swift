@@ -14,22 +14,21 @@ class AlbumDetailTableViewController: UITableViewController {
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     
+    // MARK: - Properties
     // Receiver Property
     var album: Album? {
         didSet {
             updateViews()
         }
     }
-    
     // Album and Track Data for TableView
     var albumData: AlbumIDResults? {
         didSet {
             updateData()
         }
     }
-    
-    var tracks: [Track] = []
- 
+    var selectedTracks: [Track] = []
+    var filteredTracks: [Track] = []
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -37,20 +36,12 @@ class AlbumDetailTableViewController: UITableViewController {
     }
     
     // MARK: - Methods
+    // I need to filter out any AlbumIDResult dictionary that has a wrapperType value of 'collection' because those are the results that are not tracks and return nil for track-specific properties.
     func updateData(){
         guard let albumData = albumData else {return}
-        tracks = albumData.results
-        
-        let filteredTracks = tracks.filter { track in
-            for (_, value) in track {
-                if value == nil {
-                    return false
-                }
-            }
-            return true
-        }
-     
-        tableView.reloadData()
+        selectedTracks = albumData.results
+        filteredTracks = selectedTracks.filter { $0.wrapperType == "track" }
+        print(filteredTracks)
     }
     
     func updateViews() {
@@ -75,12 +66,12 @@ class AlbumDetailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return tracks.count
+        return filteredTracks.count
     }
 
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as? TrackTableViewCell else { return UITableViewCell() }
-         let track = tracks[indexPath.row]
+         let track = filteredTracks[indexPath.row]
              cell.configureTracksList(with: track)
 
      return cell

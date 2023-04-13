@@ -74,9 +74,9 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
                 NetworkingController.fetchTracks(collectionIDValue: dataToSend.collectionID) { result in
                     switch result {
                     case .success(let albumIDResult):
-                        DispatchQueue.main.async {
+//                        DispatchQueue.main.async {
                             destinationVC.albumData = albumIDResult
-                        }
+//                        }
                     case .failure(let error):
                         print("There was an error fetching data for album tracks", error.errorDescription!)
                     }
