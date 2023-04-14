@@ -8,10 +8,11 @@
 import UIKit
 
 class AlbumDetailViewController: UIViewController {
-
+    
     // MARK: - Outlets
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
+    @IBOutlet weak var albumTracksTableView: UITableView!
     @IBOutlet weak var albumImageView: UIImageView!
     
     // MARK: - Properties
@@ -33,6 +34,8 @@ class AlbumDetailViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        albumTracksTableView.dataSource = self
+        albumTracksTableView.delegate = self
     }
     
     // MARK: - Methods
@@ -42,6 +45,10 @@ class AlbumDetailViewController: UIViewController {
         selectedTracks = albumData.results
         filteredTracks = selectedTracks.filter { $0.wrapperType == "track" }
         print(filteredTracks)
+        DispatchQueue.main.async {
+            self.albumTracksTableView.reloadData()
+        }
+        
     }
     
     func updateViews() {
@@ -61,20 +68,20 @@ class AlbumDetailViewController: UIViewController {
             }
         }
     }
-
+    
 } // End of Class
 
 // MARK: - Extensions
 // Table View Data Source
 extension AlbumDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return filteredTracks.count
+        return filteredTracks.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as? TrackTableViewCell else { return UITableViewCell() }
         let track = filteredTracks[indexPath.row]
-            cell.configureTracksList(with: track)
-
-    return cell
+        cell.configureTracksList(with: track)
+        
+        return cell
     }
 }
