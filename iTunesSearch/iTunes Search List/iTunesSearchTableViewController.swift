@@ -44,6 +44,10 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         placeholderView.isHidden = false
+        // Check if user is returning from detail view
+        if !isBeingPresented && !isMovingToParent {
+            placeholderView.isHidden = true
+        }
     }
     
     // MARK: - Table View Data Source

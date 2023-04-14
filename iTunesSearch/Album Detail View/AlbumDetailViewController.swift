@@ -23,12 +23,14 @@ class AlbumDetailViewController: UIViewController {
             updateViews()
         }
     }
+    
     // Album and Track Data for TableView
     var albumData: AlbumIDResults? {
         didSet {
             updateData()
         }
     }
+    
     var selectedTracks: [Track] = []
     var filteredTracks: [Track] = []
     
@@ -40,7 +42,7 @@ class AlbumDetailViewController: UIViewController {
     }
     
     // MARK: - Methods
-    // I need to filter out any AlbumIDResult dictionary that has a wrapperType value of 'collection' because those are the results that are not tracks and return nil for track-specific properties.
+    // Filter out any AlbumIDResult dictionary that has a wrapperType value of 'collection' because those are the results that are not tracks and return nil for track-specific properties.
     func updateData(){
         guard let albumData = albumData else {return}
         selectedTracks = albumData.results
@@ -49,7 +51,6 @@ class AlbumDetailViewController: UIViewController {
         DispatchQueue.main.async {
             self.albumTracksTableView.reloadData()
         }
-        
     }
     
     func updateViews() {
