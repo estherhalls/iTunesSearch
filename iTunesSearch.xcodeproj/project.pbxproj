@@ -15,7 +15,6 @@
 		EB24ADE129AD43210029FBA9 /* iTunesSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */; };
 		EB24ADE729AD44F60029FBA9 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */; };
 		EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */; };
-		EB24ADEC29AD45390029FBA9 /* AlbumDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */; };
 		EB372D9429AD4A8D002F7E4A /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9329AD4A8D002F7E4A /* AlbumDetailTableViewController.swift */; };
 		EB372D9629AD4E5D002F7E4A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9529AD4E5D002F7E4A /* NetworkError.swift */; };
 		EB372D9829AD4FBD002F7E4A /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9729AD4FBD002F7E4A /* Album.swift */; };
@@ -36,7 +35,6 @@
 		EB24ADE029AD43210029FBA9 /* iTunesSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchTableViewController.swift; sourceTree = "<group>"; };
 		EB24ADE629AD44F60029FBA9 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
-		EB24ADEB29AD45390029FBA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = iTunesSearch/Base.lproj/AlbumDetail.storyboard; sourceTree = "<group>"; };
 		EB372D9329AD4A8D002F7E4A /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		EB372D9529AD4E5D002F7E4A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EB372D9729AD4FBD002F7E4A /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				EB760E2E29E9D63800279F26 /* Detail.storyboard */,
-				EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */,
 				EB24ADE829AD450A0029FBA9 /* TrackTableViewCell.swift */,
 				EB372D9329AD4A8D002F7E4A /* AlbumDetailTableViewController.swift */,
 				EB760E2C29E9D5DD00279F26 /* AlbumDetailViewController.swift */,
@@ -196,7 +193,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB24ADD829AD39430029FBA9 /* LaunchScreen.storyboard in Resources */,
-				EB24ADEC29AD45390029FBA9 /* AlbumDetail.storyboard in Resources */,
 				EB24ADD529AD39430029FBA9 /* Assets.xcassets in Resources */,
 				EB760E3029E9D63800279F26 /* Detail.storyboard in Resources */,
 				EB24ADD329AD39400029FBA9 /* SearchList.storyboard in Resources */,
@@ -241,14 +237,6 @@
 				EB24ADD729AD39430029FBA9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		EB24ADEA29AD45390029FBA9 /* AlbumDetail.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EB24ADEB29AD45390029FBA9 /* Base */,
-			);
-			name = AlbumDetail.storyboard;
 			sourceTree = "<group>";
 		};
 		EB760E2E29E9D63800279F26 /* Detail.storyboard */ = {

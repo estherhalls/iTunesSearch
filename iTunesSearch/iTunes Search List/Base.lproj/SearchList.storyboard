@@ -85,7 +85,7 @@
                                     <outlet property="albumNameLabel" destination="4wc-ZT-OUA" id="fqR-jk-joy"/>
                                     <outlet property="artistNameLabel" destination="6fi-Hc-PPe" id="dAL-HA-p3F"/>
                                     <outlet property="trackQTYLabel" destination="Ry6-qY-T1z" id="65u-PS-Isq"/>
-                                    <segue destination="59y-lX-Uum" kind="show" identifier="toDetailVC" id="3Hl-Pe-s5N"/>
+                                    <segue destination="rhF-cR-uFs" kind="show" identifier="toDetailVC" id="ca4-ag-H3H"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -99,6 +99,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iRF-tW-Lve" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="904.58015267175574" y="-52.112676056338032"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="te9-VG-AOW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" id="rhF-cR-uFs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0Te-dP-b9u"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lUC-TR-dh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="-52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NIf-7S-K9t">
@@ -117,16 +127,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZU0-1e-kBE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-22.137404580152669" y="-52.112676056338032"/>
-        </scene>
-        <!--AlbumDetail-->
-        <scene sceneID="hNB-7X-4A9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AlbumDetail" id="59y-lX-Uum" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vV8-KQ-AEC"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CR1-2y-8Kk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1762.5954198473282" y="-52.112676056338032"/>
         </scene>
     </scenes>
     <resources>

@@ -66,7 +66,7 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetailVC",
-           let destinationVC = segue.destination as? AlbumDetailTableViewController {
+           let destinationVC = segue.destination as? AlbumDetailViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let dataToSend = self.albums[indexPath.row]
                 destinationVC.album = dataToSend
