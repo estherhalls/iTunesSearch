@@ -21,6 +21,7 @@
 		EB372D9F29AD570D002F7E4A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB372D9E29AD570D002F7E4A /* Track.swift */; };
 		EB760E2D29E9D5DD00279F26 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB760E2C29E9D5DD00279F26 /* AlbumDetailViewController.swift */; };
 		EB760E3029E9D63800279F26 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB760E2E29E9D63800279F26 /* Detail.storyboard */; };
+		EB760E3229E9F52D00279F26 /* UnitConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB760E3129E9F52D00279F26 /* UnitConversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EB372D9E29AD570D002F7E4A /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		EB760E2C29E9D5DD00279F26 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
 		EB760E2F29E9D63800279F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iTunesSearch/Album Detail View/iTunesSearch/Base.lproj/Detail.storyboard"; sourceTree = "<group>"; };
+		EB760E3129E9F52D00279F26 /* UnitConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConversion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				EB372D9529AD4E5D002F7E4A /* NetworkError.swift */,
 				EB372D9A29AD5028002F7E4A /* NetworkingController.swift */,
+				EB760E3129E9F52D00279F26 /* UnitConversion.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB760E3229E9F52D00279F26 /* UnitConversion.swift in Sources */,
 				EB24ADE729AD44F60029FBA9 /* AlbumTableViewCell.swift in Sources */,
 				EB372D9629AD4E5D002F7E4A /* NetworkError.swift in Sources */,
 				EB24ADE929AD450A0029FBA9 /* TrackTableViewCell.swift in Sources */,

@@ -14,6 +14,10 @@ class TrackTableViewCell: UITableViewCell {
     @IBOutlet weak var trackTitleLabel: UILabel!
     @IBOutlet weak var trackDurationLabel: UILabel!
     
+    
+    // MARK: - Properties
+    let units = UnitConversion()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -25,7 +29,8 @@ class TrackTableViewCell: UITableViewCell {
             }
             self.trackTitleLabel.text = track.trackName
             if let trackTime = track.trackTime {
-                self.trackDurationLabel.text = "\(trackTime)"
+                let duration = self.units.millisToMinSec(millis: trackTime)
+                self.trackDurationLabel.text = duration
             }
         }
     }

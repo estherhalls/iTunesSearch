@@ -16,6 +16,7 @@ class AlbumDetailViewController: UIViewController {
     @IBOutlet weak var albumImageView: UIImageView!
     
     // MARK: - Properties
+ 
     // Receiver Property
     var album: Album? {
         didSet {
