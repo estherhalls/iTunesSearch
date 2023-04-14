@@ -61,6 +61,11 @@ class AlbumDetailViewController: UIViewController {
             case .success(let image):
                 DispatchQueue.main.async {
                     self?.albumImageView.image = image
+                    self?.albumImageView.layer.masksToBounds = false
+                    self?.albumImageView.layer.shadowColor = UIColor.black.cgColor
+                    self?.albumImageView.layer.shadowOpacity = 0.5
+                    self?.albumImageView.layer.shadowOffset = CGSize(width: 2, height: 2)
+                    self?.albumImageView.layer.shadowRadius = 5
                     self?.albumTitleLabel.text = album.collectionName
                     self?.artistNameLabel.text = album.artistName
                 }

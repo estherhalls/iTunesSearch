@@ -74,9 +74,7 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
                 NetworkingController.fetchTracks(collectionIDValue: dataToSend.collectionID) { result in
                     switch result {
                     case .success(let albumIDResult):
-//                        DispatchQueue.main.async {
                             destinationVC.albumData = albumIDResult
-//                        }
                     case .failure(let error):
                         print("There was an error fetching data for album tracks", error.errorDescription!)
                     }
@@ -84,8 +82,7 @@ class iTunesSearchTableViewController: UITableViewController, UISearchBarDelegat
             }
         }
     }
-    
-    
+ 
 } // End of Class
 
 // MARK: - Search Bar Delegate Extension
