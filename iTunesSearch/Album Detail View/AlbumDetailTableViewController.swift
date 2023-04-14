@@ -68,27 +68,6 @@ class AlbumDetailTableViewController: UITableViewController {
 
         return filteredTracks.count
     }
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 30))
-//        headerView.backgroundColor = .lightGray
-//        
-//        let leftLabel = UILabel(frame: CGRect(x: 10, y: 0, width: headerView.frame.width/3, height: headerView.frame.height))
-//        leftLabel.textAlignment = .left
-//        leftLabel.text = "#"
-//        headerView.addSubview(leftLabel)
-//        
-//        let centerLabel = UILabel(frame: CGRect(x: headerView.frame.width/3, y: 0, width: headerView.frame.width/3, height: headerView.frame.height))
-//        centerLabel.textAlignment = .center
-//        centerLabel.text = "Track Title"
-//        headerView.addSubview(centerLabel)
-//        
-//        let rightLabel = UILabel(frame: CGRect(x: (headerView.frame.width/3) * 2, y: 0, width: headerView.frame.width/3, height: headerView.frame.height))
-//        rightLabel.textAlignment = .right
-//        rightLabel.text = "Duration"
-//        headerView.addSubview(rightLabel)
-//        
-//        return headerView
-//    }
 
      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: "trackCell", for: indexPath) as? TrackTableViewCell else { return UITableViewCell() }
