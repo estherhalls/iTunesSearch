@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t4X-c5-kjO">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Album Detail View Controller-->
+        <scene sceneID="GI2-Kk-KgO">
+            <objects>
+                <viewController id="t4X-c5-kjO" customClass="AlbumDetailViewController" customModule="iTunesSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lxa-l6-gye">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLz-Fk-ThL">
+                                <rect key="frame" x="121.66666666666669" y="69" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="HO2-vU-bOL"/>
+                                    <constraint firstAttribute="width" constant="150" id="wcv-Rv-zMS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kuC-Oa-I3R">
+                                <rect key="frame" x="15" y="233.99999999999997" width="363" height="50.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Album Title)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tY1-Rl-lpW">
+                                        <rect key="frame" x="120.33333333333334" y="0.0" width="122.33333333333334" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="(Artist)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-0v-dH3">
+                                        <rect key="frame" x="155" y="30.333333333333314" width="53" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YgS-p1-vrV">
+                                <rect key="frame" x="15" y="299.66666666666674" width="363" height="503.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="trackCell" id="9eI-ja-Ds7" customClass="TrackTableViewCell" customModule="iTunesSearch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="363" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9eI-ja-Ds7" id="CxX-EX-ATN">
+                                            <rect key="frame" x="0.0" y="0.0" width="363" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwn-Gp-uam">
+                                                    <rect key="frame" x="20" y="13.666666666666666" width="8" height="16.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(3:25)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-gd-RKm">
+                                                    <rect key="frame" x="313.33333333333331" y="13.666666666666666" width="34.666666666666686" height="16.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="(Track Title)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDv-GI-6pd">
+                                                    <rect key="frame" x="50" y="13.666666666666666" width="258.33333333333331" height="16.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZDv-GI-6pd" firstAttribute="leading" secondItem="Gwn-Gp-uam" secondAttribute="trailing" constant="22" id="D0T-k4-nb1"/>
+                                                <constraint firstItem="ZDv-GI-6pd" firstAttribute="centerY" secondItem="CxX-EX-ATN" secondAttribute="centerY" id="HhX-Fy-3Z2"/>
+                                                <constraint firstItem="Gwn-Gp-uam" firstAttribute="centerY" secondItem="CxX-EX-ATN" secondAttribute="centerY" id="KQU-FQ-DIl"/>
+                                                <constraint firstItem="ZDv-GI-6pd" firstAttribute="leading" secondItem="CxX-EX-ATN" secondAttribute="leading" constant="50" id="N38-9v-zR8"/>
+                                                <constraint firstItem="ahJ-gd-RKm" firstAttribute="centerY" secondItem="CxX-EX-ATN" secondAttribute="centerY" id="OXv-B8-kF6"/>
+                                                <constraint firstItem="ahJ-gd-RKm" firstAttribute="leading" secondItem="ZDv-GI-6pd" secondAttribute="trailing" constant="5" id="UTq-LJ-j79"/>
+                                                <constraint firstAttribute="trailing" secondItem="ahJ-gd-RKm" secondAttribute="trailing" constant="15" id="x55-PL-dS3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackDurationLabel" destination="ahJ-gd-RKm" id="jHg-NO-coG"/>
+                                            <outlet property="trackNumberLabel" destination="Gwn-Gp-uam" id="scP-Jn-jhr"/>
+                                            <outlet property="trackTitleLabel" destination="ZDv-GI-6pd" id="13b-3c-JSn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="81O-TS-HNC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kuC-Oa-I3R" firstAttribute="top" secondItem="bLz-Fk-ThL" secondAttribute="bottom" constant="15" id="0Ts-dq-4S9"/>
+                            <constraint firstItem="bLz-Fk-ThL" firstAttribute="top" secondItem="81O-TS-HNC" secondAttribute="top" constant="10" id="GIW-dT-Zjc"/>
+                            <constraint firstItem="kuC-Oa-I3R" firstAttribute="leading" secondItem="81O-TS-HNC" secondAttribute="leading" constant="15" id="IKX-Kf-ipS"/>
+                            <constraint firstItem="81O-TS-HNC" firstAttribute="bottom" secondItem="YgS-p1-vrV" secondAttribute="bottom" constant="15" id="LWq-tf-ReE"/>
+                            <constraint firstItem="YgS-p1-vrV" firstAttribute="leading" secondItem="81O-TS-HNC" secondAttribute="leading" constant="15" id="OpX-H9-RGI"/>
+                            <constraint firstItem="bLz-Fk-ThL" firstAttribute="centerX" secondItem="Lxa-l6-gye" secondAttribute="centerX" id="UPc-ki-TPg"/>
+                            <constraint firstItem="81O-TS-HNC" firstAttribute="trailing" secondItem="kuC-Oa-I3R" secondAttribute="trailing" constant="15" id="Vfm-20-dPV"/>
+                            <constraint firstItem="81O-TS-HNC" firstAttribute="trailing" secondItem="YgS-p1-vrV" secondAttribute="trailing" constant="15" id="ef1-1D-uhB"/>
+                            <constraint firstItem="YgS-p1-vrV" firstAttribute="top" secondItem="kuC-Oa-I3R" secondAttribute="bottom" constant="15" id="kmH-oT-2ur"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumImageView" destination="bLz-Fk-ThL" id="njK-Mf-zsv"/>
+                        <outlet property="albumTitleLabel" destination="tY1-Rl-lpW" id="ddd-ui-cEl"/>
+                        <outlet property="albumTracksTableView" destination="YgS-p1-vrV" id="ABP-cx-QGR"/>
+                        <outlet property="artistNameLabel" destination="eg6-0v-dH3" id="bAv-gv-01E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7z-1R-a37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2427" y="-52"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
